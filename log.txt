@@ -1,0 +1,45 @@
+Product Check Out System
+Java Swing - FileWriter
+@author: naser.abdullah.cse@ulab.edu.bd
+@description: A checkout system
+							- Takes product from textfeild
+							- Stores every product til checkout 
+							- Writes all product in a text file when check out
+							- Has an exit button
+#course: CSE412,CSE413
+
+#14/01/2021 - 10:00 -> 15:00
+##Set up project
+	- gui
+	- button functions
+		- add button
+		- checkout button
+		- exit button
+##Issues
+ - check out button is not writing in output file
+
+#15/01/2021 - 11:30 -> 14:32
+##Investigation 
+ 1. ☑ (resolved) problem in FileWriter 
+ 2. ☑ (resolved) actionListener not added
+ 3. (ongoing) productList resets every time action called
+		- ☑ (resolved) instantiated in actionPerformed()
+		- (ongoing) instantiated in initialize()
+
+#16/01/2021 - 12:54 -> 17:24
+##Investigation
+	3. ☑ (resolved) productList resets every time action called
+		- ☑ (resolved) instantiated in initialize()
+
+##[Report] Investigation
+productList was instantiated at actionPerformed(), therefore it
+resets everytime any button is clicked resulting it to be an
+empty list. Thus the list was being not printed.
+
+##Intended Updates
+	- ☑ (resolved) Clear list after checkout
+	- Take Product price with name
+		- ☑ [done] Add another textfeild
+		- ☑ [done] Add another List<String>
+		- ☑ [done] Modify add button actionListener
+		- ☑ [done] Modify checkout button actionListener
